@@ -1,0 +1,12 @@
+name: ramp-coral
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - os
+  - pandas
+  - scikit-learn>=0.22
+
+  - pip
+  - pip:
+    - ramp-workflow==0.6.0
