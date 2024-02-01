@@ -1,0 +1,4 @@
+os
+pandas
+scikit-learn>=0.22
+ramp-workflow==0.6.0
