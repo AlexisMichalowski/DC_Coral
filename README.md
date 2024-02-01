@@ -1,5 +1,7 @@
 # RAMP staring-kit on coral bleaching predictions
 
+*Authors: Emeline Bruyère, Anaëlle Cossard, Alexis Michalowski-Skarbek, Rosanne Phebe, Remi Poulard & Marine Tognia-tonou (M2 AMI2B).*
+
 Percentage of bleached corals predictions from environmental data
 
 ## Getting started
@@ -7,7 +9,7 @@ Percentage of bleached corals predictions from environmental data
 ### Install
 
 To run a submission and the notebook you will need the dependencies listed
-in `requirements.txt`. You can install install the dependencies with the
+in `requirements.txt`. You can install the required dependencies with the
 following command-line:
 
 ```bash
