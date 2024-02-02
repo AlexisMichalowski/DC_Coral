@@ -1,4 +1,4 @@
-# RAMP staring-kit on coral bleaching predictions
+# RAMP starting-kit on coral bleaching predictions
 
 *Authors: Emeline Bruyère, Anaëlle Cossard, Alexis Michalowski-Skarbek, Rosanne Phebe, Rémi Poulard & Marine Tognia-tonou (M2 AMI2B).*  
 
