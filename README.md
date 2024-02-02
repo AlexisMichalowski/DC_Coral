@@ -1,6 +1,6 @@
 # RAMP staring-kit on coral bleaching predictions
 
-*Authors: Emeline Bruyère, Anaëlle Cossard, Alexis Michalowski-Skarbek, Rosanne Phebe, Remi Poulard & Marine Tognia-tonou (M2 AMI2B).*  
+*Authors: Emeline Bruyère, Anaëlle Cossard, Alexis Michalowski-Skarbek, Rosanne Phebe, Rémi Poulard & Marine Tognia-tonou (M2 AMI2B).*  
 
 Coral reefs, the world's most diverse marine ecosystems, play a crucial role in providing resources and services benefiting millions of people. However, they have recently faced an escalation in thermal-stress events, leading to coral bleaching. The coral bleaching phenomenon results from the breakdown of the symbiotic relationship between corals and microalgae. It is caracterised by the loss of pigments and symbionts, causing corals to appear pale, bleached. Bleaching can be temporary or fatal for corals, but undoubtedly, marine heat waves pose the most significant threat to coral reefs on a global scale.  
 
