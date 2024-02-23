@@ -1,6 +1,7 @@
 # library to import
 import os
 import pandas as pd
+import numpy as np
 import rampwf as rw
 
 # Assuming you have the configuration parameter 'workflow'
@@ -24,29 +25,31 @@ score_types = [
     rw.score_types.NormalizedRMSE(name="Nrmse", precision=3)
 ]
 
-# define cross validation??
-
-
-def get_cv(X, y):
-    # a verifier? faut il specifier les groupes
-    cv = GroupShuffleSplit(n_splits=5, test_size=0.2, random_state=1234)
-    return cv.split(X, y)
 
 
 _target_column_name = 'Percent_Bleached'
-_ignore_column_names = []  # a rajouter, voir code rémi
+_ignore_column_names = ["Sample_ID","Site_ID"]  # a rajouter, voir code rémi ### A voir !!
 
 # I/O method for data
 
+groups = None
 
 def _read_data(path, f_name):
-    data = pd.read_csv(os.path.join(path, 'data', f_name))
+    data = pd.read_csv(os.path.join(path, 'data', f_name),sep=";")
+    data = data.iloc[:, 2:]
     y_array = data[_target_column_name].values
     X_df = data.drop([_target_column_name] + _ignore_column_names, axis=1)
+    X_df=X_df.to_numpy()
     return X_df, y_array
 
 
 def get_train_data(path='.'):
+    data = pd.read_csv(os.path.join(path, "data", "train.csv"),sep=";")
+    data_df = data.copy()
+    data_df["Sample_ID"] = data_df["Sample_ID"].astype("category")
+    Site_ID = np.array(data_df["Sample_ID"].cat.codes)
+    global groups
+    groups = Site_ID
     f_name = 'train.csv'
     return _read_data(path, f_name)
 
@@ -54,3 +57,11 @@ def get_train_data(path='.'):
 def get_test_data(path='.'):
     f_name = 'test.csv'
     return _read_data(path, f_name)
+
+# define cross validation??
+
+
+def get_cv(X, y):
+    # a verifier? faut il specifier les groupes
+    cv = GroupShuffleSplit(n_splits=5, test_size=0.2, random_state=1234)
+    return cv.split(X, y,groups)

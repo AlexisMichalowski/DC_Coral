@@ -1,16 +1,15 @@
-from sklearn.base import BaseEstimator
 from sklearn.pipeline import make_pipeline, Pipeline
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
-from sklearn.linear_model import LinearRegression  
-
+from sklearn.linear_model import LinearRegression
+from sklearn.base import BaseEstimator
 
 class Regressor(BaseEstimator):
     def __init__(self):
         self.transformer = Pipeline(
             steps=[
                 ("imputer", SimpleImputer(strategy="median")),
-                ("scaler", StandardScaler()),
+                ("scaler", StandardScaler())
             ]
         )
         self.model = LinearRegression()  
@@ -21,3 +20,4 @@ class Regressor(BaseEstimator):
 
     def predict(self, X):
         return self.pipe.predict(X)
+
