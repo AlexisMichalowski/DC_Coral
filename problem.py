@@ -16,12 +16,12 @@ problem_title = "Coral Bleaching Prediction"
 Predictions = rw.prediction_types.make_regression()
 
 # workflow: regressor
-workflow = rw.workflows.regressor()
+workflow = rw.workflows.Regressor()
 
 # scoring: We'll have to choose, for now: rmse and normalized rmse
 score_types = [
-    rw.score_types.rmse(name="rmse", precision=3),
-    rw.score_types.normalized_rmse(name="Nrmse", precision=3)
+    rw.score_types.RMSE(name="rmse", precision=3),
+    rw.score_types.NormalizedRMSE(name="Nrmse", precision=3)
 ]
 
 # define cross validation??
