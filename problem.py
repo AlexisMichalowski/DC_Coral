@@ -1,4 +1,4 @@
-# library to import
+# Libraries to import
 import os
 import pandas as pd
 import numpy as np
@@ -7,7 +7,6 @@ import rampwf as rw
 # Assuming you have the configuration parameter 'workflow'
 # set to 'regressor' in your problem.yml
 
-# a modifier si on change de cv
 from sklearn.model_selection import GroupShuffleSplit
 
 # Problem title
@@ -16,10 +15,10 @@ problem_title = "Coral Bleaching Prediction"
 # Type of prediction: regression
 Predictions = rw.prediction_types.make_regression()
 
-# workflow: regressor
+# Workflow: regressor
 workflow = rw.workflows.Regressor()
 
-# scoring: We'll have to choose, for now: rmse and normalized rmse
+# Scoring: rmse and normalized rmse
 score_types = [
     rw.score_types.RMSE(name="rmse", precision=3),
     rw.score_types.NormalizedRMSE(name="Nrmse", precision=3)
@@ -28,7 +27,7 @@ score_types = [
 
 
 _target_column_name = 'Percent_Bleached'
-_ignore_column_names = ["Sample_ID","Site_ID"]  # a rajouter, voir code rémi ### A voir !!
+_ignore_column_names = ["Sample_ID","Site_ID"]
 
 # I/O method for data
 
@@ -58,10 +57,7 @@ def get_test_data(path='.'):
     f_name = 'test.csv'
     return _read_data(path, f_name)
 
-# define cross validation??
-
 
 def get_cv(X, y):
-    # a verifier? faut il specifier les groupes
     cv = GroupShuffleSplit(n_splits=5, test_size=0.2, random_state=1234)
     return cv.split(X, y,groups)
