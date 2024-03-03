@@ -2,11 +2,15 @@
 
 *Authors: Emeline Bruyère, Anaëlle Cossard, Alexis Michalowski-Skarbek, Rosanne Phebe, Rémi Poulard & Marine Tognia-tonou (M2 AMI2B).*  
 
-Coral reefs, the world's most diverse marine ecosystems, play a crucial role in providing resources and services benefiting millions of people. However, they have recently faced an escalation in thermal-stress events, leading to coral bleaching. The coral bleaching phenomenon results from the breakdown of the symbiotic relationship between corals and microalgae. It is caracterised by the loss of pigments and symbionts, causing corals to appear pale, bleached. Bleaching can be temporary or fatal for corals, but undoubtedly, marine heat waves pose the most significant threat to coral reefs on a global scale.  
+Coral reefs stand as some of the most diverse and vital ecosystems on the planet, playing an indispensable role in the health of our oceans. Approximately 25% of marine species rely on these vibrant underwater habitats for their survival. Central to the vitality of coral reefs is the intricate symbiotic relationship between corals and photosynthetic algae, which reside within their tissues. In this mutually beneficial partnership, corals provide protection and shelter to the algae, while receiving essential oxygen and nutrients in return.
 
-The Global Coral-Bleaching Database (GCBD) compiles 34,846 coral bleaching records from 14,405 sites in 93 countries, from 1980–2020. The GCBD provides vital information on the presence or absence of coral bleaching along with site exposure, distance to land, mean turbidity, cyclone frequency, and a suite of sea-surface temperature metrics at the times of survey.
+However, when environmental stressors exert pressure on coral ecosystems, the delicate balance of this symbiosis can falter. This phenomenon, known as coral bleaching, manifests as the gradual breakdown of the relationship between corals and microalgae. Characterized by the loss of pigmentation and symbionts, bleached corals appear pale. Although coral bleaching can be temporary and reversible under certain conditions, prolonged stress can prove fatal for these fragile organisms.
 
-The goal of this RAMP is to predict the percentage of bleached corals from environmental data, based on the data gathered in the GCBD.
+Multiple factors contribute to coral bleaching, with global warming, human activities, and the prevalence of parasites and viruses among the primary culprits. Rising sea temperatures, in particular, have been closely linked to the increase in frequency and severity of coral bleaching events.
+
+The Global Coral-Bleaching Database (GCBD) serves as a repository of invaluable information, compiling over three decades of coral bleaching records from around the world. With data spanning 93 countries and encompassing 14,405 sites, the GCBD offers crucial insights into the prevalence and distribution of coral bleaching. Key environmental parameters, such as site exposure, distance to land, mean turbidity, cyclone frequency, and various sea-surface temperature metrics, are meticulously documented within the database.
+
+In light of the urgency to safeguard coral reef ecosystems, the objective of this RAMP challenge is to leverage the environmental data provided by the GCBD to predict the severity of the bleaching of corals.
 
 ## Getting started
 
