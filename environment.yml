@@ -3,8 +3,12 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - os
   - pandas
+  - numpy
+  - statsmodels
+  - matplotlib
+  - seaborn
+  - missingno
   - scikit-learn>=0.22
 
   - pip
